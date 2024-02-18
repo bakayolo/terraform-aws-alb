@@ -41,9 +41,6 @@ resource "aws_lb" "this" {
   tags = merge(
     var.tags,
     var.lb_tags,
-    {
-      Name = var.name != null ? var.name : var.name_prefix
-    },
   )
 
   timeouts {
